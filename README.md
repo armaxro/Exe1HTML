@@ -1,5 +1,5 @@
 
-# creation d'un depot GIT
+# creation d'un depot GIT 
 ## Création d'un dépôt GIT en local
 
 Dans la console, initialisation du dépôt:
@@ -20,4 +20,45 @@ ls -a
 ```bash
 git add README.md
 ```
+
+## Pour effectuer la sauvegarde
+les fichiers en attentes s-de sauvegarde sont en vert 
+les fichiers non suivi sont en rouge
+
+seul les fichiers en **staging** seront sauvés
+```bash
+git commit -m"Message du commit"
+
+un commit est une sauvegarde, on peut y accéder avec un 'git log'
+(affichage des identifiants des sauvegardes et 'git show' (sans paramètre, affichage 
+du dernier commit)
+
+
+## Pour ajouter tous les fichiers
+```bash
+git add . 
+```
+
+## Ajout d'un serveur
+
+Nous allons utiliser un dépôt que l'on va créer sur Github.com
+après connexion. Comme c'est un travail personnel, son URL sera 
+de ce type https://github.com/VOTRE_USERNAME/le nom du projet
+
+Nos créons un new repository, puis nous copions la clefs SSH
+
+git@github.com:armaxro/Exe1HTML.git
+
+Nous retournons dans notre console:
+
+```bash
+git remote add origin git@github.com:armaxro/Exe1HTML.git
+```
+
+Pour voir si ça a fonctionné
+```bash
+git remote -v
+```
+
+
 
